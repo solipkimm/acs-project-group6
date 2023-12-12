@@ -1,10 +1,10 @@
-name: tfsec
+name: tflint
 
 on:
   push:
-    branches: [ "staging", "dev" ]
+    branches: [ "staging"]
   pull_request:
-    branches: [ "prod", "staging" ]
+    branches: [ "prod"]
 
 jobs:
   tfsec_tflint:
