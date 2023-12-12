@@ -74,7 +74,8 @@ sudo yum install –y ansible # Run this command to install ansible
 sudo pip2.7 install boto3 #Install the boto3 library for Python 2.7 with administrative privileges
 
 Update ansible configuration : sudo vi /etc/ansible/ansible.cfg
-Enable the AWS EC2 inventory plugin  : enable_plugins = aws_ec2
+Add the following command inside the config file : enable_plugins = aws_ec2
+This will enable the  AWS EC2 inventory plugin.
 
 
 Run the Ansible playbook:
