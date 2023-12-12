@@ -1,6 +1,9 @@
-
-output "public_ip_tf" {
+output "public_ips" {
   value = aws_instance.publicinstance[*].public_ip
+}
+
+output "private_ips" {
+  value = aws_instance.privateinstance[*].private_ip
 }
 
 output "public_ip_bastion" {
@@ -9,9 +12,5 @@ output "public_ip_bastion" {
 
 output "public_ip_ansible" {
   value = aws_instance.ansibleinstance[*].public_ip
-}
-
-output "private_ips" {
-  value = aws_instance.privateinstance[*].private_ip
 }
 
