@@ -102,7 +102,7 @@ resource "aws_instance" "ansibleinstance" {
     create_before_destroy = true
   }  
   tags    = merge(
-    var.default_tags,{
+    var.ansible_tags,{
     Name = "${var.prefix}-${var.env}-public-ansible-${count.index + 3}"
     }
   )

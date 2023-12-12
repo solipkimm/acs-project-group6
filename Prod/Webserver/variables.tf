@@ -22,6 +22,15 @@ variable "default_tags" {
   description = "Default tags to be appliad to all AWS resources"
 }
 
+variable "ansible_tags" {
+  default = {
+    "Owner" = "Group6Ansible"
+    "App"   = "Web"
+  }
+  type        = map(any)
+  description = "Ansible tags to be appliad to all AWS resources"
+}
+
 variable "prefix" {
   default     = "Group6"
   type        = string
